@@ -43,6 +43,22 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Move(const FInputActionValue& Value)
 {
-	//move based on forward & Y, and Right & X
+	UE_LOG(LogTemp, Warning, TEXT("You pressed a move button"));
+}
+
+void APlayerCharacter::Jump(const FInputActionValue& Value)
+{
+}
+
+void APlayerCharacter::Look(const FInputActionValue& Value)
+{
+}
+
+void APlayerCharacter::Shoot(const FInputActionValue& Value)
+{
+}
+
+void APlayerCharacter::Reload(const FInputActionValue& Value)
+{
 }
 

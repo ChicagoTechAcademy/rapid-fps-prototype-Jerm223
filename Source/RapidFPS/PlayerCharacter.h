@@ -22,6 +22,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+protected:
+
+	// Projectile class to spawn.
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<class AFPSProjectile> ProjectileClass;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -33,10 +39,9 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Input")
 	UInputMappingContext* DefaultMappingContext;
 
-	// jump
-	// look
-	// shoot
-	// reload
+	// Gun muzzle offset from the camera location.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	FVector MuzzleOffset;
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "Input")
 	UInputAction* MoveAction;
